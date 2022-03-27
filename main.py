@@ -27,6 +27,7 @@ def encriptarArchivo(rutaArchivo):
     archivo = open(rutaArchivo,'w')
     archivo.write(textoEncriptado)
     archivo.close()
+    print ('El archivo se encripto correctamente')
 
 
 def desencriptarArchivo(rutaArchivo):
@@ -38,6 +39,8 @@ def desencriptarArchivo(rutaArchivo):
     archivo = open(rutaArchivo,'w')
     archivo.write(textoDesEncriptado)
     archivo.close()
+    print ('El archivo se desencripto correctamente')
+
     
 respuestaEoD = input('Presione E para encriptar o D para desencriptar')
 rutaArchivo = input('Ingrese la ruta del archivo')
