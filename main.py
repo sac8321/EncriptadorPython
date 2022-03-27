@@ -14,7 +14,6 @@ def encriptar(texto):
 def desencriptar(texto):
     print('Funcion para desencriptar '+texto)
     textoFinal=''
-    
     for letra in texto:
         ascii=ord(letra)
         ascii -=1
@@ -45,8 +44,8 @@ def desencriptarArchivo(rutaArchivo):
     print ('El archivo se desencripto correctamente')
 
     
-respuestaEoD = input('Presione E para encriptar o D para desencriptar')
-rutaArchivo = input('Ingrese la ruta del archivo')
+respuestaEoD = input('Presione E para encriptar o D para desencriptar ')
+rutaArchivo = input('Ingrese la ruta del archivo ')
 
 if respuestaEoD == 'E':
     encriptarArchivo(rutaArchivo)
