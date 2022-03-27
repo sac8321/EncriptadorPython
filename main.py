@@ -1,21 +1,24 @@
 from cgitb import text
+#from curses import ACS_CKBOARD
 
 
 def encriptar(texto):
     print ('Funcion para encriptar texto '+texto)
     textoFinal=''
     for letra in texto:
-        textoFinal += letra+'x'
+        ascii=ord(letra)
+        ascii +=1
+        textoFinal += chr(ascii)
     return textoFinal
 
 def desencriptar(texto):
     print('Funcion para desencriptar '+texto)
     textoFinal=''
-    contador=0
+    
     for letra in texto:
-        if contador %2 ==0 :         
-            textoFinal += letra
-        contador +=1
+        ascii=ord(letra)
+        ascii -=1
+        textoFinal += chr(ascii)
     return textoFinal
 
 def encriptarArchivo(rutaArchivo):
